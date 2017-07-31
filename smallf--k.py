@@ -1,6 +1,7 @@
 import sys
 
 def BFinterpret(commands):
+	print(''.join('+-,.<>[]'[command] for command in commands))
 	tape = [0]
 	pointer = 0
 	index = 0
@@ -20,7 +21,7 @@ def BFinterpret(commands):
 				pointer += 1
 		elif commands[index] == 5:
 			pointer += 1
-			while pointer > len(tape):
+			while pointer >= len(tape):
 				tape.append(0)
 		elif commands[index] == 6 and not tape[pointer]:
 			brackets = 1
