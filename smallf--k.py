@@ -1,7 +1,6 @@
 import sys
 
 def BFinterpret(commands):
-	print(''.join('+-,.<>[]'[command] for command in commands))
 	tape = [0]
 	pointer = 0
 	index = 0
