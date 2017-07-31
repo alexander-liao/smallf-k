@@ -7,8 +7,10 @@ def BFinterpret(commands):
 	while index < len(commands):
 		if commands[index] == 0:
 			tape[pointer] += 1
+			tape[pointer] %= 256
 		elif commands[index] == 1:
 			tape[pointer] -= 1
+			tape[pointer] %= 256
 		elif commands[index] == 2:
 			tape[pointer] = sys.stdin.read(1)
 		elif commands[index] == 3:
